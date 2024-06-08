@@ -1,0 +1,53 @@
+body{
+    background: #151515;
+}
+body .content{
+    margin-top: 0%;
+    margin-left: 2.5%;
+}
+body .content .calc{
+    margin-left: 1px;
+    display: inline;
+    margin-top: 1px;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    height: 2.5%;
+    width: 20%;
+    border-radius: 5px;
+    background: #0080FF;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+body .content input{
+    display: inline;
+    margin-top: 20px;
+    margin-left: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    height: 2.5%;
+    width: 80%;
+    border-radius: 5px;
+    background: #FFF;
+    color: #000;
+    font-weight: 500;
+}
+body .hist{
+    background: #202020;
+    float: right;
+    width: 22%;
+    height: 100vh;
+}
+body .hist ul{
+    margin-top: 2%;
+    margin-left: 5%;
+    list-style-type: none;
+    color: #757575;
+}
+ul li{
+    margin-top: 2%;
+}
