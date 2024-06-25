@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexstyle.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+        // ------------------------------------------------------------------------------------------- Firebase Config
+        const firebaseConfig = {
+            apiKey: "AIzaSyAFcrpKPBgNRk9otHjckDVEZH1wBpXtWKU",
+            authDomain: "bdpear-3fc7d.firebaseapp.com",
+            projectId: "bdpear-3fc7d",
+            storageBucket: "bdpear-3fc7d.appspot.com",
+            messagingSenderId: "378457389013",
+            appId: "1:378457389013:web:fbc8e83edd3d77f4f2ef5c",
+            measurementId: "G-GCSMK2F95W"
+        };
+
+        // ------------------------------------------------------------------------------------------- Inicializado de Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+
+        // Función ----------------------------------------------------------------------------------- Iniciar Sesion con Correo y Contraseña (Firebase Auth)
+        window.iniciarSesionCorreoContrasena = function() {
+            console.log("Botón de inicio de sesión presionado");
+            var email = document.getElementById("mail").value.trim();
+            var password = document.getElementById("pass").value.trim();
+
+            console.log("Email:", email);
+            console.log("Password:", password);
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    var user = userCredential.user;
+                    console.log("Usuario ha iniciado sesión:", user);
+                    window.location.href = "main.html";
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    console.error("Error al iniciar sesión:", errorCode, errorMessage);
+                    // ------------------------------------------------------------------------------ Mensajes de Error
+                    var errorDiv = document.getElementById("resultado");
+                    switch (errorCode) {
+                        case 'auth/invalid-email':
+                            errorDiv.textContent = 'El formato del correo electrónico no es válido.';
+                            break;
+                        case 'auth/user-disabled':
+                            errorDiv.textContent = 'Este usuario ha sido deshabilitado.';
+                            break;
+                        case 'auth/user-not-found':
+                            errorDiv.textContent = 'No se encontró ningún usuario con este correo electrónico.';
+                            break;
+                        case 'auth/wrong-password':
+                            errorDiv.textContent = 'La contraseña es incorrecta.';
+                            break;
+                        default:
+                            errorDiv.textContent = 'Error al iniciar sesión: ' + errorMessage;
+                    }
+                    errorDiv.style.display = "block";
+                    errorDiv.style.color = "red";
+                    // Limpiar los campos de contraseña
+                    document.getElementById("pass").value = '';
+                });
+        };
+
+        // Asignar la función al botón una vez que el DOM esté completamente cargado
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById("loginButton").onclick = iniciarSesionCorreoContrasena;
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <form method="post" id="login">
+                <label for="mail">Ingresa tu correo electrónico:</label>
+                <input type="email" id="mail" required>
+                <label for="pass">Ingresa tu contraseña:</label>
+                <input type="password" id="pass" required>
+                <input type="button" value="Iniciar sesión" id="loginButton">
+                <div id="resultado"></div>
+                <a href="registro.html">¿No tienes una cuenta? ¡Regístrate aquí!</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

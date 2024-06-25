@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 0px 0%;
+}
+nav{
+    background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)),url(images/ph2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+nav ul{
+    list-style: none;
+    width: 100%;
+    padding-right: 60px;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background: #0080FF;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+.content{
+    margin-top: 3%;
+    color: #000;
+    max-width: 90%;
+}
+.content .imgcontainer{
+    margin-left: 5%;
+    width: 45%;
+    height: 55%;
+    margin-top: 1%;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.content .btnsig{
+align-content: end;
+}
+.content .imgcontainer .content .title{
+    font-size: 25px;
+    font-weight: 250;
+    line-height: 60px;
+    margin-left: 5%;
+    color: #fff;
+}
+.content .imgcontainer .content .enum{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 85px;
+    margin-left: 5%;
+    color: #fff;
+}
+.content .imgcontainer .content .progress img{
+    height: 48px;
+    width: 48px;
+}
+.content .imgcontainer .content .progress{
+    margin-left: 4%;
+}
+.content .imgcontainer .content .progress label{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    position: absolute;
+    padding: 0.65% 0.6%;
+}
+.content .separator{
+    font-size: 25px;
+    line-height: 60px;
+    padding: 25px 1%;
+    clear:left;
+}
+.container .imgcontainer#no1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica1a.webp);
+}
+.container .imgcontainer#no2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica2a.png);
+}
+.container .imgcontainer#no3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica3a.png);
+}
+.container .imgcontainer#no4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica4a.jpeg);
+}
+.container .imgcontainer#no5{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica4a.jpeg);
+}
+.container .imgcontainer#no6{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica4a.jpeg);
+}
+.container .imgcontainer#no7{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica4a.jpeg);
+}
+.container .imgcontainer#no8{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica4a.jpeg);
+}
+.container .imgcontainer#no9{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no10{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no11{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no12{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no13{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no14{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no15{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no16{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no17{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no18{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no19{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no20{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no21{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no22{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no23{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#no24{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#af{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#gf{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/fisica.jpg);
+}
+.container .imgcontainer#esp1{
+    background-image: radial-gradient(rgb(0, 108, 208),rgb(0, 162, 255));
+}
+.container .imgcontainer#esp2{
+    background-image: radial-gradient(rgb(0, 208, 108),rgb(0, 255, 162));
+}
+.container .imgcontainer#esp3{
+    background-image: radial-gradient(rgb(208, 0, 108),rgb(255, 0, 162));
+}
+.container .imgcontainer#gf .content{
+    font-size: 45px;
+    font-weight: 250;
+    line-height: 60px;
+    margin-left: 5%;
+    color: #fff;
+}
+.container .imgcontainer#af .content{
+    font-size: 45px;
+    font-weight: 250;
+    line-height: 60px;
+    margin-left: 5%;
+    color: #fff;
+}
+.container .imgcontainer#cc{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/calc.jpg);
+}
+.container .imgcontainer#cc .content{
+    font-size: 45px;
+    font-weight: 250;
+    line-height: 60px;
+    margin-left: 5%;
+    color: #fff;
+}
+.container .imgcontainer#sim{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)),url(images/calc.jpg);
+}
+.container .imgcontainer#sim .content{
+    font-size: 45px;
+    font-weight: 250;
+    line-height: 60px;
+    margin-left: 5%;
+    color: #fff;
+}
+.container .imgcontainer#eval{
+    width: 100%;
+    height: 150px;
+    background: radial-gradient(#1eff00, #3eff00, #8eff00);
+}
+.container .imgcontainer#te{
+    width: 100%;
+    height: 150px;
+    background: radial-gradient(rgba(255,0,0,0.65), rgba(255,55,00,0.65)),url(images/ecuaciones.jpeg);
+}
+.container .imgcontainer#te .content{
+    position: absolute;
+    left: 75px;
+    color: #fff;
+    font-size: xx-large;
+}
