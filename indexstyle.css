@@ -77,6 +77,19 @@ body{
     background: aquamarine;
     cursor: pointer;
 }
+.content form input[type=submit]{
+    border: 0;
+    outline: 0;
+    margin-top: 15px;
+    margin-left: 2.5%;
+    width:  90%;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 5px;
+    height: 25px;
+    background: aquamarine;
+    cursor: pointer;
+}
 .content form label{
     border: 0;
     margin-top: 15px;
