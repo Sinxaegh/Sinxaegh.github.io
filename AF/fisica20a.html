@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Energía Potencial (Trabajo Mecánico)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Cuál es la relación entre el trabajo realizado y la energía potencial?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">El trabajo realizado sobre un objeto se convierte en energía potencial.</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">El trabajo realizado sobre un objeto disminuye su energía potencial.</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">El trabajo realizado y la energía potencial son independientes.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. Un trabajador levanta una caja de 10 kg a una altura de 3 metros. ¿Cuál es el trabajo realizado? (g = 9.8 m/s²)</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">294 J</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">30 J</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">98 J</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Qué es el trabajo mecánico?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">Es el producto de la fuerza aplicada y la distancia recorrida en la dirección de la fuerza.</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">Es el producto de la masa y la aceleración.</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">Es la energía necesaria para mantener un objeto en movimiento.</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica20a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividadesfisica.html'">Volver</button>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - MRUV (Aceleración)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>MRUV (Aceleración)</h1>
+            <hr width="100%">
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Qué es la aceleración en el contexto del MRUV?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_1">La distancia recorrida por unidad de tiempo</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="correcta">
+                    <label for="respuesta1_2">El cambio de velocidad por unidad de tiempo</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">El cambio de posición por unidad de tiempo</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cómo se calcula la aceleración?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">a = &Delta; v / &Delta; t</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">a = v * t</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">a = d/t</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. Un coche pasa de 20 m/s a 30 m/s en 5 segundos. ¿Cuál es su aceleración?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">2 m/s²</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">4 m/s²</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">5 m/s²</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. ¿Qué indica una aceleración negativa en MRUV?</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_1">Que el objeto se mueve en sentido contrario</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="correcta">
+                    <label for="respuesta4_2">Que el objeto está desacelerando</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">Que el objeto está acelerando</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. Un objeto con una aceleración de 3 m/s² se mueve durante 4 segundos. ¿Cuál es el cambio en su velocidad?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">12 m/s</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">8 m/s</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">16 m/s</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica6_1a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

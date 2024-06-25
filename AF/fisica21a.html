@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Potencia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Cuál es la fórmula para calcular la potencia?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">P = W/t</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">P = Wt</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">P = W/d</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. Un motor realiza un trabajo de 1000 J en 5 segundos. ¿Cuál es su potencia?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">200 W</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">5000 W</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">100 W</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Qué es la potencia en términos de física?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">Es la cantidad de trabajo realizado por unidad de tiempo.</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">Es la energía total de un sistema.</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">Es la fuerza aplicada por unidad de distancia.</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica21a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividadesfisica.html'">Volver</button>
+        </div>
+    </div>
+    
+</body>
+</html>

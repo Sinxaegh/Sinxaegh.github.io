@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - Primera Ley de Newton: Ley de la Inercia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Actividades - Primera Ley de Newton: Ley de la Inercia</h1>
+            <hr width="100%">
+            <br>Actividad:<br>
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Qué establece la primera ley de Newton o ley de la inercia?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">Un objeto en reposo permanece en reposo y un objeto en movimiento continúa en movimiento con velocidad constante a menos que actúe sobre él una fuerza externa.</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">La aceleración de un objeto es directamente proporcional a la fuerza neta que actúa sobre él e inversamente proporcional a su masa.</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">Por cada acción, hay una reacción igual y opuesta.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Qué es la inercia?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">La resistencia de un objeto a cambiar su estado de movimiento o reposo.</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">La tendencia de un objeto a acelerar cuando se le aplica una fuerza.</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">La fuerza que un objeto ejerce sobre otro.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. Según la primera ley de Newton, ¿qué se necesita para cambiar el estado de movimiento de un objeto?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">Una fuerza externa.</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">Una aceleración constante.</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">Una fuerza interna.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. Un ejemplo de la primera ley de Newton es:</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="correcta">
+                    <label for="respuesta4_1">Un coche que sigue moviéndose hacia adelante incluso después de que se apaga el motor.</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_2">Una pelota que cae al suelo debido a la gravedad.</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">Una persona empujando una caja.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. ¿Qué propiedad de un objeto determina su inercia?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">Su masa.</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">Su velocidad.</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">Su volumen.</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica12a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

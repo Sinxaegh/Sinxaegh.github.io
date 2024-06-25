@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - Unidades de Medida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Unidades de Medida</h1>
+            <hr width="100%">
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Cuál es la unidad de medida de la longitud en el Sistema Internacional de Unidades (SI)?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">Metro</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">Litro</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">Kilogramo</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cuál es la unidad de medida de la masa en el Sistema Internacional de Unidades (SI)?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_1">Newton</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="correcta">
+                    <label for="respuesta2_2">Kilogramo</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">Gramo</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Cuál es la unidad de medida de la temperatura en el Sistema Internacional de Unidades (SI)?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">Kelvin</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">Celsius</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">Fahrenheit</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. ¿Cuál es la unidad de medida de la corriente eléctrica en el Sistema Internacional de Unidades (SI)?</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_1">Voltio</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="correcta">
+                    <label for="respuesta4_2">Amperio</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">Ohmio</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. ¿Cuál es la unidad de medida de la cantidad de sustancia en el Sistema Internacional de Unidades (SI)?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">Mol</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">Litro</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">Gramo</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>6. ¿Cuál es la unidad de medida de la intensidad luminosa en el Sistema Internacional de Unidades (SI)?</p>
+                    <input type="radio" id="respuesta6_1" name="respuesta6" value="correcta">
+                    <label for="respuesta6_1">Candela</label><br>
+                    <input type="radio" id="respuesta6_2" name="respuesta6" value="incorrecta">
+                    <label for="respuesta6_2">Lumen</label><br>
+                    <input type="radio" id="respuesta6_3" name="respuesta6" value="incorrecta">
+                    <label for="respuesta6_3">Lux</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>7. ¿Cuál es la unidad de medida del tiempo en el Sistema Internacional de Unidades (SI)?</p>
+                    <input type="radio" id="respuesta7_1" name="respuesta7" value="correcta">
+                    <label for="respuesta7_1">Segundo</label><br>
+                    <input type="radio" id="respuesta7_2" name="respuesta7" value="incorrecta">
+                    <label for="respuesta7_2">Minuto</label><br>
+                    <input type="radio" id="respuesta7_3" name="respuesta7" value="incorrecta">
+                    <label for="respuesta7_3">Hora</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica3_1a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

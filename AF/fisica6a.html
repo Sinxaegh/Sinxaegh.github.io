@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - Movimiento Rectilíneo Uniformemente Variado (MRUV)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h1>
+            <hr width="100%">
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Qué caracteriza al movimiento rectilíneo uniformemente variado (MRUV)?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_1">Velocidad constante</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="correcta">
+                    <label for="respuesta1_2">Aceleración constante</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">Velocidad variable</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cuál es la fórmula de la velocidad final en MRUV?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">v<sub>f</sub> = v<sub>i</sub> + a * t</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">v<sub>f</sub> = v<sub>i</sub> - a * t</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">v<sub>f</sub> = v<sub>i</sub> * a * t</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. En MRUV, ¿cómo se calcula la distancia recorrida?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_1">d = v<sub>f</sub> * t</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="correcta">
+                    <label for="respuesta3_2">d = v<sub>i</sub>t * 1/2 at<sup>2</sup></label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">d = v<sub>i</sub> + 1/2 at<sup>2</sup></label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. Un coche acelera uniformemente desde el reposo con una aceleración de 2 m/s² durante 5 segundos. ¿Cuál es su velocidad final?</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="correcta">
+                    <label for="respuesta4_1">10 m/s</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_2">15 m/s</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">20 m/s</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. Un objeto se mueve con una aceleración constante de 3 m/s² y su velocidad inicial es de 4 m/s. ¿Qué distancia recorre en 6 segundos?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">90 metros</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">108 metros</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">72 metros</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica6a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

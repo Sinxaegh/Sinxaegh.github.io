@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Energía Potencial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Cuál es la fórmula para calcular la energía potencial gravitatoria?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">E<sub>p</sub> = mgh</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">E<sub>p</sub> = 1/2mv<sup>2</sup></label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">E<sub>p</sub> = 1/2 mv<sup>2</sup> + mgh</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. Un objeto de 10 kg se encuentra a una altura de 5 metros. ¿Cuál es su energía potencial gravitatoria? (g = 9.8 m/s²)</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">490 J</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">50 J</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">980 J</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Qué sucede con la energía potencial de un objeto cuando su altura se duplica?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">Se duplica</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">Se cuadruplica</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">Se mantiene igual</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica19a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividadesfisica.html'">Volver</button>
+        </div>
+    </div>
+    
+</body>
+</html>

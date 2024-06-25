@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Evaluación del Movimiento</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../guiafstyle.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="../herramientas.html">Herramientas</a></li>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guia de Estudio</a></li>
+                <li><a href="../creditos.html">Creditos</a></li>
+            </ul>
+        </nav>
+<div id="preguntas-container"></div>
+<button class="btnsig" onclick="verificarRespuestas()">Verificar Respuestas</button>
+<button class="btnant" onclick="location.href ='../'">Anterior</button>
+<script>
+                // Variable para almacenar las respuestas correctas
+                var respuestasCorrectas = [];
+
+// Función para generar un problema de MRUV aleatorio
+function generarProblemaMRUV() {
+    // Unidades de medida aleatorias
+    var unidadesDistancia = ['metros', 'kilómetros', 'centímetros'];
+    var unidadesTiempo = ['segundos', 'minutos', 'horas'];
+
+    // Generar valores aleatorios para velocidad inicial, aceleración y tiempo
+    var velocidadInicial = Math.floor(Math.random() * 50) + 1; // Velocidad inicial entre 1 y 50 m/s
+    var aceleracion = (Math.floor(Math.random() * 20) + 1) * (Math.random() < 0.5 ? -1 : 1); // Aceleración entre -20 y 20 m/s^2
+    var tiempo = Math.floor(Math.random() * 20) + 1; // Tiempo entre 1 y 20 segundos
+    var distancia = Math.floor(Math.random() * 999) + 1; // Distancia entre 1 y 999 metros/kilómetros/centímetros
+
+    // Seleccionar unidades de distancia y tiempo aleatoriamente
+    var unidadDistancia = unidadesDistancia[Math.floor(Math.random() * unidadesDistancia.length)];
+    var unidadTiempo = unidadesTiempo[Math.floor(Math.random() * unidadesTiempo.length)];
+
+    // Convertir distancia y tiempo a las unidades seleccionadas
+    if (unidadDistancia === 'kilómetros') {
+        distancia /= 1000; // Convertir metros a kilómetros
+    } else if (unidadDistancia === 'centímetros') {
+        distancia /= 100; // Convertir metros a centímetros
+    }
+
+    if (unidadTiempo === 'minutos') {
+        tiempo *= 60; // Convertir minutos a segundos
+        aceleracion /= 60; // Convertir de m/min^2 a m/s^2
+    } else if (unidadTiempo === 'horas') {
+        tiempo = Math.min(tiempo, 24); // Limitar el tiempo a 24 horas
+        tiempo *= 3600; // Convertir horas a segundos
+        aceleracion /= 3600; // Convertir de m/h^2 a m/s^2
+    }
+
+    // Calcular la velocidad final usando la fórmula v = v0 + at
+    var velocidadFinal = velocidadInicial + (aceleracion * tiempo);
+
+    // Calcular la distancia recorrida usando la fórmula d = v0*t + (1/2)*a*t^2
+    var distanciaRecorrida = (velocidadInicial * tiempo) + (0.5 * aceleracion * tiempo * tiempo);
+
+    // Crear el problema como un objeto
+    var problema = {
+        velocidadInicial: velocidadInicial,
+        velocidadFinal: velocidadFinal,
+        aceleracion: aceleracion,
+        tiempo: tiempo,
+        distancia: distancia,
+        unidadDistancia: unidadDistancia,
+        unidadTiempo: unidadTiempo,
+        distanciaRecorrida: distanciaRecorrida
+    };
+
+    return problema;
+}
+
+// Función para generar 4 respuestas para una pregunta, siendo una correcta y tres incorrectas
+function generarRespuestas(problema) {
+    var respuestas = [];
+    // Respuesta correcta: distancia recorrida
+    var distanciaCorta = problema.distanciaRecorrida.toFixed(problema.unidadDistancia === 'kilómetros' ? 2 : 0);
+    respuestas.push(distanciaCorta + " " + problema.unidadDistancia);
+
+    // Respuestas incorrectas: generar valores aleatorios cercanos a la distancia correcta
+    // Asegurarse de que al menos una de las respuestas sea correcta
+    respuestas.push(distanciaCorta + 10 + " " + problema.unidadDistancia);
+    respuestas.push(distanciaCorta - 20 + " " + problema.unidadDistancia);
+    respuestas.push(distanciaCorta + 5 + " " + problema.unidadDistancia);
+
+    // Barajar las respuestas para que la correcta no siempre esté en la misma posición
+    respuestas = respuestas.sort(function() { return 0.5 - Math.random() });
+
+    return respuestas;
+}
+
+// Función para generar y mostrar todas las preguntas
+function generarPreguntas() {
+    var preguntasContainer = document.getElementById("preguntas-container");
+
+    for (var i = 0; i < 10; i++) {
+        // Generar un problema de MRUV y sus respuestas
+        var problema = generarProblemaMRUV();
+        var respuestas = generarRespuestas(problema);
+
+        // Almacenar la respuesta correcta
+        respuestasCorrectas.push(respuestas[0]);
+
+        // Crear el elemento de pregunta
+        var preguntaElement = document.createElement("div");
+        preguntaElement.innerHTML = "<strong>Pregunta " + (i + 1) + ":</strong> ¿Cuál es la distancia recorrida por un objeto que tiene una velocidad inicial de " + problema.velocidadInicial + " " + problema.unidadDistancia + "/" + problema.unidadTiempo + ", una aceleración de " + problema.aceleracion.toFixed(2) + " " + (problema.unidadTiempo === 'horas' ? 'm/h^2' : 'm/min^2') + " y un tiempo de " + problema.tiempo + " " + problema.unidadTiempo + "?<br>";
+
+        // Agregar las respuestas como checkboxes
+        for (var j = 0; j < 4; j++) {
+            var checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.name = "respuesta-" + i;
+            checkbox.value = respuestas[j];
+            preguntaElement.appendChild(checkbox);
+            preguntaElement.appendChild(document.createTextNode(respuestas[j]));
+            preguntaElement.appendChild(document.createElement("br"));
+        }
+
+        // Agregar la pregunta al contenedor
+        preguntasContainer.appendChild(preguntaElement);
+    }
+}
+
+// Función para verificar las respuestas seleccionadas
+function verificarRespuestas() {
+    var respuestasSeleccionadas = [];
+
+    // Obtener todas las respuestas seleccionadas
+    for (var i = 0; i < 10; i++) {
+        var checkboxes = document.getElementsByName("respuesta-" + i);
+        for (var j = 0; j < checkboxes.length; j++) {
+            if (checkboxes[j].checked) {
+                respuestasSeleccionadas.push(checkboxes[j].value);
+                break; // Solo necesitamos una respuesta seleccionada por pregunta
+            }
+        }
+    }
+
+    // Verificar las respuestas seleccionadas
+    var puntaje = 0;
+    for (var i = 0; i < respuestasCorrectas.length; i++) {
+        if (respuestasSeleccionadas[i] === respuestasCorrectas[i]) {
+            puntaje++;
+        }
+    }
+
+    // Mostrar el puntaje al usuario
+    alert("Tu puntaje es: " + puntaje + "/10");
+}
+
+// Generar y mostrar las preguntas al cargar la página
+window.onload = function() {
+    generarPreguntas();
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - Segunda Ley de Newton: Ley de Fuerza y Masa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Actividades - Segunda Ley de Newton: Ley de Fuerza y Masa</h1>
+            <hr width="100%">
+            <br>Actividad:<br>
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Qué establece la segunda ley de Newton?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">La aceleración de un objeto es directamente proporcional a la fuerza neta que actúa sobre él e inversamente proporcional a su masa.</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">Un objeto en reposo permanece en reposo y un objeto en movimiento continúa en movimiento con velocidad constante a menos que actúe sobre él una fuerza externa.</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">Por cada acción, hay una reacción igual y opuesta.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cuál es la fórmula matemática que representa la segunda ley de Newton?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">F = m * a</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">F = m / a</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">F = a / m</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Qué sucede con la aceleración de un objeto si la fuerza aplicada sobre él se duplica mientras su masa permanece constante?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">La aceleración se duplica.</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">La aceleración se reduce a la mitad.</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">La aceleración permanece igual.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. Si se aplica una fuerza constante a dos objetos de masas diferentes, ¿cómo se compara la aceleración de los dos objetos?</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="correcta">
+                    <label for="respuesta4_1">El objeto con menor masa tendrá una mayor aceleración.</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_2">El objeto con mayor masa tendrá una mayor aceleración.</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">Ambos objetos tendrán la misma aceleración.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. Un coche de masa 1000 kg acelera a 2 m/s². ¿Qué fuerza neta actúa sobre el coche?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">2000 N</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">500 N</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">1000 N</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica13a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

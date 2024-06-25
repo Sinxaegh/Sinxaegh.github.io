@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - MRUV (Tiro Parabólico)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Actividades - MRUV (Tiro Parabólico)</h1>
+            <hr width="100%">
+            <br>Actividad:<br>
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Cuál es la trayectoria de un objeto lanzado con una velocidad inicial que forma un ángulo con la horizontal?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">Una parábola</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">Una línea recta</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">Un círculo</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cómo se descompone la velocidad inicial en un tiro parabólico?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">En componentes horizontal y vertical</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">En componentes radial y tangencial</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">No se descompone</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Qué factor afecta únicamente a la componente vertical de la velocidad en un tiro parabólico?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">La gravedad</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">La resistencia del aire</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">La fuerza centrípeta</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. En ausencia de resistencia del aire, ¿cómo se comporta la componente horizontal de la velocidad en un tiro parabólico?</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="correcta">
+                    <label for="respuesta4_1">Permanece constante</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_2">Aumenta</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">Disminuye</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. ¿Cuál es el ángulo de lanzamiento para lograr el alcance máximo en un tiro parabólico sin resistencia del aire?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">45 grados</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">30 grados</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">60 grados</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica8a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - Movimiento Rectilíneo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Movimiento Rectilíneo</h1>
+            <hr width="100%">
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Cómo se define el movimiento rectilíneo?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">Movimiento a lo largo de una línea recta</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">Movimiento en un círculo</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">Movimiento elíptico</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cuál de las siguientes es una característica del movimiento rectilíneo?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_1">Velocidad angular</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="correcta">
+                    <label for="respuesta2_2">Trayectoria lineal</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">Aceleración centrípeta</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Qué magnitudes se consideran en el análisis del movimiento rectilíneo?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">Desplazamiento, velocidad, y tiempo</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">Masa, energía, y fuerza</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">Temperatura, presión, y volumen</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. En el movimiento rectilíneo, si un objeto mantiene una velocidad constante, ¿qué tipo de movimiento está realizando?</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="correcta">
+                    <label for="respuesta4_1">Movimiento rectilíneo uniforme</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_2">Movimiento rectilíneo uniformemente acelerado</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">Movimiento circular uniforme</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. ¿Qué es el desplazamiento en el contexto del movimiento rectilíneo?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_1">La distancia total recorrida por un objeto</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="correcta">
+                    <label for="respuesta5_2">El cambio de posición de un objeto en línea recta</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">La velocidad media de un objeto</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica4a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="../guiastyle.css">
+    <link rel="stylesheet" href="ccstyle.css">
+</head>
+<body>
+    <div class="hist">
+        <ul id="history"></ul>
+    </div>
+    <div class="content">
+    <input type="text" id="display" disabled><br><br>
+
+    <button class="calc" id="siete" onclick="addToDisplay('7')">7</button>
+    <button class="calc" id="ocho" onclick="addToDisplay('8')">8</button>
+    <button class="calc" id="nueve" onclick="addToDisplay('9')">9</button>
+    <button class="calc" id="mas" onclick="addToDisplay('+')">+</button><br>
+
+    <button class="calc" id="cuatro" onclick="addToDisplay('4')">4</button>
+    <button class="calc" id="cinco" onclick="addToDisplay('5')">5</button>
+    <button class="calc" id="seis" onclick="addToDisplay('6')">6</button>
+    <button class="calc" id="menos" onclick="addToDisplay('-')">-</button><br>
+
+    <button class="calc" id="uno" onclick="addToDisplay('1')">1</button>
+    <button class="calc" id="dos" onclick="addToDisplay('2')">2</button>
+    <button class="calc" id="tres" onclick="addToDisplay('3')">3</button>
+    <button class="calc" id="mul" onclick="addToDisplay('*')">*</button><br>
+
+    <button class="calc" id="cero" onclick="addToDisplay('0')">0</button>
+    <button class="calc" id="dec" onclick="addToDisplay('.')">.</button>
+    <button class="calc" id="calcular" onclick="calculate()">=</button>
+    <button class="calc" id="div" onclick="addToDisplay('/')">/</button><br>
+
+    <button class="calc" id="clear" onclick="clearDisplay()">C</button>
+    <button class="calc" id="sin" onclick="calculateSin()">sin</button>
+    <button class="calc" id="cos" onclick="calculateCos()">cos</button>
+    <button class="calc" id="sqrt" onclick="calculateSqrt()">√</button>
+
+    <button id="back">Volver a Herramientas</button>
+    <script>
+        var historyList = document.getElementById('history');
+
+        function addToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculate() {
+            var expression = document.getElementById('display').value;
+            var result = eval(expression);
+            document.getElementById('display').value = result;
+            addToHistory(expression + ' = ' + result);
+        }
+
+        function calculateSin() {
+            var value = parseFloat(document.getElementById('display').value);
+            var result = Math.sin(value * Math.PI / 180);
+            document.getElementById('display').value = result;
+            addToHistory('sin(' + value + ') = ' + result);
+        }
+
+        function calculateCos() {
+            var value = parseFloat(document.getElementById('display').value);
+            var result = Math.cos(value * Math.PI / 180);
+            document.getElementById('display').value = result;
+            addToHistory('cos(' + value + ') = ' + result);
+        }
+
+        function calculateSqrt() {
+            var value = parseFloat(document.getElementById('display').value);
+            var result = Math.sqrt(value);
+            document.getElementById('display').value = result;
+            addToHistory('√(' + value + ') = ' + result);
+        }
+
+        function calculateTan() {
+            var value = parseFloat(document.getElementById('display').value);
+            var result = Math.tan(value * Math.PI / 180);
+            document.getElementById('display').value = result;
+            addToHistory('tan(' + value + ') = ' + result);
+        }
+
+        function addToHistory(entry) {
+            var li = document.createElement('li');
+            li.textContent = entry;
+            historyList.appendChild(li);
+        }
+        document.addEventListener('keydown', function(event) {
+            var keyPressed = event.key;
+            switch (keyPressed) {
+                case '1':
+                    addToDisplay('1');
+                    break;
+                case '2':
+                    addToDisplay('2');
+                    break;
+                case '3':
+                    addToDisplay('3');
+                    break;
+                case '4':
+                    addToDisplay('4');
+                    break;
+                case '5':
+                    addToDisplay('5');
+                    break;
+                case '6':
+                    addToDisplay('6');
+                    break;
+                case '7':
+                    addToDisplay('7');
+                    break;
+                case '8':
+                    addToDisplay('8');
+                    break;
+                case '9':
+                    addToDisplay('9');
+                    break;
+                case '0':
+                    addToDisplay('0');
+                    break;
+                case '+':
+                    addToDisplay('+');
+                    break;
+                case '-':
+                    addToDisplay('-');
+                    break;
+                case '*':
+                    addToDisplay('*');
+                    break;
+                case '/':
+                    addToDisplay('/');
+                    break;
+                case '.':
+                    addToDisplay('.');
+                    break;
+                case '=':
+                case 'Enter':
+                    calculate();
+                    break;
+                case 'r':
+                case 'R':
+                    calculateSqrt();
+                    break;
+                case 'c':
+                case 'C':
+                    clearDisplay();
+                    break;
+                case 's':
+                case 'S':
+                    calculateSin();
+                    break;
+                case 'c':
+                case 'C':
+                    calculateCos();
+                    break;
+                case 't':
+                case 'T':
+                    calculateTan();
+                    break;
+                case 'Backspace':
+                    var currentValue = document.getElementById('display').value;
+                    document.getElementById('display').value = currentValue.slice(0, -1);
+                    break;
+            }
+        });
+    </script>
+    </div>
+</body>
+</html>

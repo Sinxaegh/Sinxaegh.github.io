@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rozamiento en un Plano Inclinado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guia de Estudio</a></li>
+                <li><a href="../creditos.html">Creditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Qué fuerza es responsable del movimiento de un objeto en un plano inclinado?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">La componente de la fuerza de gravedad paralela al plano.</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">La fuerza normal.</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">La fuerza de rozamiento estático.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. Un bloque de 5 kg se encuentra en reposo en un plano inclinado de 30°. Si el coeficiente de rozamiento estático es 0.4, ¿se moverá el bloque?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">No, porque la fuerza de rozamiento es mayor que la componente paralela del peso.</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">Sí, porque la fuerza de rozamiento es menor que la componente paralela del peso.</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">Sí, porque no hay suficiente rozamiento.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Cómo se calcula la fuerza de rozamiento cinético en un plano inclinado?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">Multiplicando el coeficiente de rozamiento cinético por la fuerza normal.</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">Multiplicando el coeficiente de rozamiento estático por la fuerza normal.</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">Dividiendo el coeficiente de rozamiento cinético por la fuerza normal.</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica17a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividadesfisica.html'">Volver</button>
+        </div>
+    </div>
+    
+</body>
+</html>

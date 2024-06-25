@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guia de Estudio de Fisica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="../actividades.html">Actividades</a></li>
+            <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+            <li><a href="../creditos.html">Créditos</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <!-- Cantidades Físicas -->
+        <h2>Cantidades Físicas</h2>
+        <hr width="100%">
+        <form id="cuestionario">
+            <div class="pregunta">
+                <p>1. ¿Cuál de las siguientes opciones es una cantidad vectorial?</p>
+                <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                <label for="respuesta1_1">Velocidad</label><br>
+                <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                <label for="respuesta1_2">Temperatura</label><br>
+                <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                <label for="respuesta1_3">Masa</label><br>
+            </div>
+            <div class="pregunta">
+                <p>2. ¿Cuál de las siguientes opciones representa una cantidad escalar?</p>
+                <input type="radio" id="respuesta2_1" name="respuesta2" value="incorrecta">
+                <label for="respuesta2_1">Fuerza</label><br>
+                <input type="radio" id="respuesta2_2" name="respuesta2" value="correcta">
+                <label for="respuesta2_2">Tiempo</label><br>
+                <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                <label for="respuesta2_3">Aceleración</label><br>
+            </div>
+            <div class="pregunta">
+                <p>3. ¿Cuál de las siguientes opciones es una cantidad derivada?</p>
+                <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                <label for="respuesta3_1">Densidad</label><br>
+                <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                <label for="respuesta3_2">Longitud</label><br>
+                <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                <label for="respuesta3_3">Tiempo</label><br>
+            </div>
+            <div class="pregunta">
+                <p>4. ¿Qué cantidad física se mide en julios?</p>
+                <input type="radio" id="respuesta4_1" name="respuesta4" value="incorrecta">
+                <label for="respuesta4_1">Temperatura</label><br>
+                <input type="radio" id="respuesta4_2" name="respuesta4" value="correcta">
+                <label for="respuesta4_2">Energía</label><br>
+                <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                <label for="respuesta4_3">Masa</label><br>
+            </div>
+            <div class="pregunta">
+                <p>5. ¿Cuál de las siguientes opciones es una cantidad fundamental?</p>
+                <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                <label for="respuesta5_1">Longitud</label><br>
+                <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                <label for="respuesta5_2">Velocidad</label><br>
+                <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                <label for="respuesta5_3">Fuerza</label><br>
+            </div>
+            <!-- Agrega aquí más preguntas -->
+        </form>
+        <div id="resultado"></div>
+
+        <script src="fisica2a.js"></script>
+        <!-- Fin del documento -->
+        <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+        <button class="btnant" onclick="location.href='../actividadesfisica.html'">Volver</button

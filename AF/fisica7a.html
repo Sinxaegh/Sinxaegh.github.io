@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - MRUV (Tiro Vertical y Caída Libre de los Cuerpos)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Actividades - MRUV (Tiro Vertical y Caída Libre de los Cuerpos)</h1>
+            <hr width="100%">
+            <br>Actividad:<br>
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Qué aceleración experimentan los cuerpos en caída libre cerca de la superficie de la Tierra?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">9.8 m/s² hacia abajo</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">9.8 m/s² hacia arriba</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">0 m/s²</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cuál es la velocidad inicial de un objeto en caída libre si se deja caer desde el reposo?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">0 m/s</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">9.8 m/s</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">4.9 m/s</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. Un objeto es lanzado verticalmente hacia arriba con una velocidad inicial de 20 m/s. ¿Qué altura máxima alcanzará? (g = 9.8 m/s²)</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">20.4 metros</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">40.8 metros</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">10.2 metros</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. ¿Cuánto tiempo tarda en alcanzar la altura máxima un objeto lanzado hacia arriba con una velocidad inicial de 15 m/s? (g = 9.8 m/s²)</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="correcta">
+                    <label for="respuesta4_1">1.53 segundos</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_2">3.06 segundos</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">0.76 segundos</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. Un objeto es lanzado hacia arriba y alcanza una altura máxima de 25 metros. ¿Con qué velocidad inicial fue lanzado? (g = 9.8 m/s²)</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">22.14 m/s</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">11.07 m/s</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">15.64 m/s</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica7a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

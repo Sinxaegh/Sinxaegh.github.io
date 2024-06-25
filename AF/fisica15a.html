@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - Rozamiento Estático</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Actividades - Rozamiento Estático</h1>
+            <hr width="100%">
+            <br>Actividad:<br>
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Qué es el rozamiento estático?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">La fuerza que impide el deslizamiento de dos superficies en contacto cuando no hay movimiento relativo entre ellas.</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">La fuerza que se opone al movimiento de un objeto en movimiento.</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">La fuerza que causa que un objeto acelere.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cómo se calcula la fuerza de rozamiento estático máxima?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">Multiplicando el coeficiente de rozamiento estático por la fuerza normal.</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">Multiplicando la masa del objeto por la aceleración debida a la gravedad.</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">Dividiendo la fuerza aplicada por la masa del objeto.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. ¿Qué ocurre si la fuerza aplicada sobre un objeto supera la fuerza de rozamiento estático máxima?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">El objeto comienza a moverse.</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">El objeto permanece en reposo.</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">El objeto se acelera hacia atrás.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. Un bloque de 10 kg está en reposo sobre una superficie horizontal. Si el coeficiente de rozamiento estático es 0.5, ¿cuál es la fuerza de rozamiento estático máxima?</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="correcta">
+                    <label for="respuesta4_1">50 N</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_2">100 N</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">5 N</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. ¿Cuál de las siguientes afirmaciones es verdadera sobre el rozamiento estático?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">El rozamiento estático puede variar desde cero hasta su valor máximo.</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">El rozamiento estático siempre tiene un valor constante.</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">El rozamiento estático no depende de la fuerza normal.</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica15a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>

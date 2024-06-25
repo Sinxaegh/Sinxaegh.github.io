@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Actividades - Tercera Ley de Newton: Ley de Acción y Reacción</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../guiafstyle.css">
+    <meta content="text/html;" charset="UTF-8" http-equiv="Content-Type">
+    <style>
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        .mensaje-error {
+            color: red;
+        }
+        .mensaje-correcto {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="../actividades.html">Actividades</a></li>
+                <li><a href="../guiaestudio.html">Guía de Estudio</a></li>
+                <li><a href="../creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Actividades - Tercera Ley de Newton: Ley de Acción y Reacción</h1>
+            <hr width="100%">
+            <br>Actividad:<br>
+            <form id="cuestionario">
+                <div class="pregunta">
+                    <p>1. ¿Qué establece la tercera ley de Newton?</p>
+                    <input type="radio" id="respuesta1_1" name="respuesta1" value="correcta">
+                    <label for="respuesta1_1">Por cada acción, hay una reacción igual y opuesta.</label><br>
+                    <input type="radio" id="respuesta1_2" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_2">Un objeto en reposo permanece en reposo y un objeto en movimiento continúa en movimiento con velocidad constante a menos que actúe sobre él una fuerza externa.</label><br>
+                    <input type="radio" id="respuesta1_3" name="respuesta1" value="incorrecta">
+                    <label for="respuesta1_3">La aceleración de un objeto es directamente proporcional a la fuerza neta que actúa sobre él e inversamente proporcional a su masa.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>2. ¿Cuál es un ejemplo de la tercera ley de Newton?</p>
+                    <input type="radio" id="respuesta2_1" name="respuesta2" value="correcta">
+                    <label for="respuesta2_1">Cuando se empuja una pared, la pared te empuja de vuelta con una fuerza igual en la dirección opuesta.</label><br>
+                    <input type="radio" id="respuesta2_2" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_2">Un coche acelerando en una carretera.</label><br>
+                    <input type="radio" id="respuesta2_3" name="respuesta2" value="incorrecta">
+                    <label for="respuesta2_3">Un balón cayendo al suelo debido a la gravedad.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>3. En la tercera ley de Newton, ¿cómo son las fuerzas de acción y reacción?</p>
+                    <input type="radio" id="respuesta3_1" name="respuesta3" value="correcta">
+                    <label for="respuesta3_1">Son iguales en magnitud pero opuestas en dirección.</label><br>
+                    <input type="radio" id="respuesta3_2" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_2">Son iguales en magnitud y en dirección.</label><br>
+                    <input type="radio" id="respuesta3_3" name="respuesta3" value="incorrecta">
+                    <label for="respuesta3_3">Son diferentes en magnitud y en dirección.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>4. ¿Qué fuerza actúa sobre el suelo cuando una persona salta hacia arriba?</p>
+                    <input type="radio" id="respuesta4_1" name="respuesta4" value="correcta">
+                    <label for="respuesta4_1">Una fuerza hacia abajo igual a la fuerza que la persona ejerce hacia arriba.</label><br>
+                    <input type="radio" id="respuesta4_2" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_2">Una fuerza hacia arriba igual a la fuerza que la persona ejerce hacia arriba.</label><br>
+                    <input type="radio" id="respuesta4_3" name="respuesta4" value="incorrecta">
+                    <label for="respuesta4_3">Ninguna fuerza.</label><br>
+                </div>
+                <div class="pregunta">
+                    <p>5. ¿Qué sucede cuando un objeto A ejerce una fuerza sobre un objeto B?</p>
+                    <input type="radio" id="respuesta5_1" name="respuesta5" value="correcta">
+                    <label for="respuesta5_1">El objeto B ejerce una fuerza igual y opuesta sobre el objeto A.</label><br>
+                    <input type="radio" id="respuesta5_2" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_2">El objeto B se mueve en la dirección de la fuerza aplicada.</label><br>
+                    <input type="radio" id="respuesta5_3" name="respuesta5" value="incorrecta">
+                    <label for="respuesta5_3">El objeto A se detiene.</label><br>
+                </div>
+            </form>
+            <div id="resultado"></div>
+            <script src="fisica14a.js"></script>
+            <button class="btnsig" onclick="validarFormulario()">Verificar Respuestas</button>
+            <button class="btnant" onclick="location.href='../actividades.html'">Volver</button>
+        </div>
+    </div>
+</body>
+</html>
